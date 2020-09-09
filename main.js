@@ -7,6 +7,16 @@ while (isContinue) {
 
    let fate = getRandomInt(20);
 
+   chooseAnswer(fate);
+
+   isContinue = confirm("Еще?");
+}
+
+function getRandomInt(max) {
+   return Math.floor(Math.random() * Math.floor(max));
+ }
+ 
+function chooseAnswer(fate) {
    switch (fate) {
       case 1:
          alert("Бесспорно");
@@ -74,10 +84,4 @@ while (isContinue) {
       default:
          break;
    }
-
-   isContinue = confirm("Еще?");
 }
-
-function getRandomInt(max) {
-   return Math.floor(Math.random() * Math.floor(max));
- }
